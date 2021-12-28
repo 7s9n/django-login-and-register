@@ -16,3 +16,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+
+#vs code
+.vscode
+.vscode/
