@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% extends 'shared_layout/base.html' %}
+
+{%block title%}
+login
+{%endblock title%}
+
+{%block contents%}
+{%if error%}
+<div class="alert alert-danger" role="alert">
+    {{error}}
+</div>
+{%endif%}
+<form method="post">
+    {%csrf_token%}
+    {%include 'users/form_snippets.html' with form=form%}                
+    <input class="btn btn-primary" type="submit" value="Login">
+</form>
+<div class="my-2">
+    <small class="text-muted">
+        Forgot your password ? <a class="ml-2" href="{%url 'users:forgot_password'%}">restore password</a>
+    </small>
+</div>
+
+<div class="my-2">
+    <small class="text-muted">
+        Need an account ? <a class="ml-2" href="{%url 'users:register'%}">Sign Up</a>
+    </small>
+</div>
+{%endblock contents%}
