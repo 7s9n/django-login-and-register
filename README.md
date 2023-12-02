@@ -81,6 +81,14 @@ py -m pip install -r requirements.txt
 
 3. Apply migrations
 
+The following are required environment variables:
+1. SERVER_EMAIL
+2. DEFAULT_FROM_EMAIL
+3. EMAIL_HOST_PASSWORD
+4. EMAIL_HOST_USER
+5. EMAIL_HOST
+6. SECRET_KEY
+
 #### A development server
 
 Just run this command:
